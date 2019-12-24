@@ -1,0 +1,14 @@
+#
+# This is a project Makefile. It is assumed the directory this Makefile resides in is a
+# project subdirectory.
+#
+
+PROJECT_NAME := lvgl-demo
+
+EXTRA_COMPONENT_DIRS = $(IDF_PATH)/examples/common_components/protocol_examples_common
+# Add new components (source folders)
+# Must be before include $(IDF_PATH)/make/project.mk
+# $(PROJECT_PATH)/xxx didn't work -> use $(abspath xxx) instead
+
+include $(IDF_PATH)/make/project.mk
+
